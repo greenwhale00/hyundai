@@ -1,0 +1,56 @@
+* {
+   outline: 1px dashed #357;  
+}
+
+
+.inner {width: 1200px; margin: 0 auto;}
+
+.TopBanner { background: #008850; color: #f9f9f9; overflow: hidden; height: 155px; transition: 0.4s; line-height: 1; }
+.TopBanner .inner {position: relative;  padding: 50px 0;}
+.TopBanner.on {height: 0;}
+.TopBanner h2 {font-size: 30px; font-weight: 700; margin: 0 0 10px 0;}
+.TopBanner h2 span {font-weight: 400; color:#00e085 ; margin: 0 0 10px 0;}
+.TopBanner p {font-size: 15px; }
+.TopBanner .top_close_btn {position: absolute; top: 30px; right: 15px; font-size: 21px;}
+
+.Header {position: sticky; top: 0; left: 0; right: 0; /*padding: 0 45px;*/ background: rgba(0,0,0,0.3); color: #f9f9f9; line-height: 100px; transition: 0.5s; z-index: 999;} 
+
+
+
+
+.Header:hover {background: rgba(255,255,255,1); color: #444;}
+.Header.on { background: rgba(255,255,255,1); color: #444; line-height: 70px;}
+
+.Header h1 {float: left; margin: 0 0 0 70px; font-size: 0;}
+.Header h1 a { display: inline-block; vertical-align: middle; width: 188px; height: 22px; background: url(../assets/logo_white.png); font-size: 0;}
+.Header:hover h1 a {background: url(../assets/logo.png);}
+
+
+.Header .Gnb {float: left; margin: 0 0 0 50px;}
+.Header .top_service {float: right;}
+.Header .Gnb>ul>li {float: left;}
+.Header .Gnb>ul>li>a { position: relative; display: block; padding: 0 35px;  }
+
+
+.button {position: absolute; top: 155px; left:0;}
+
+
+.Section01 {margin: -155px 0 0 0;}
+
+.Section01 .itm01 {
+    background: url(../assets/main_visual01.jpg) no-repeat center center/cover;
+}
+.Section01 .itm02 {
+    background: url(../assets/main_visual02.jpg) no-repeat center center/cover;
+}
+.Section01 .itm03 {
+    background: url(../assets/main_visual03.jpg) no-repeat center center/cover;
+}
+
+
+
+.Section02 {padding: 100px 0; text-align: center;}
+.Section02 h2 {font-size: 30px; font-weight: 700; margin: 0 0 15px 0;}
+.Section02>p {font-size: 15px; font-weight: 300; margin: 0 0 40px 0;}
+
+.Section02 .inner figure {float: left; width: calc(100% / 3);}
