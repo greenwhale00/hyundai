@@ -6,16 +6,24 @@ $(function () {
         $('.Section01').addClass('on');
     });
 
+    $('.main_slider').on('init ReInit anfterChange', function (e, s, c) {
+        $('.slide_dots li').eq(c).addClass('on').siblings().removeClass('on')
+    })
+
     $('.main_slider').slick({
         arrows: false,
     });
 
+
+
     $('.left_slider').slick({
         arrows: false,
+        fade: true,
         asNavFor: '.right_slider'
     });
 
     $('.right_slider').slick({
+        arrows: false,
         asNavFor: '.left_slider',
         slidesToShow: 5,
     });
@@ -23,16 +31,19 @@ $(function () {
 
     $('.center_slider').on('init reInit afterChange', function (e, s, c) {
         console.log(s.slideCount);
-        var current = $('.center_slider .slick-center');
-        console.log(current);
+        var current = $('.center_slider .slick-current');
         current.addClass('on').siblings().removeClass('on');
-        $('.num').text((c ? c : 0) + 1 + '/' + s.slideCount)
+        console.log(current);
+        $('.num').html((c ? c : 0) + 1 + '<span> / 0' + s.slideCount + '</span>');
+        $('.content_box>div').eq(c).addClass('on').siblings().removeClass('on');
     })
 
 
     $('.center_slider').slick({
+        arrows: false,
         centerMode: true,
         centerPadding: '300px',
+        dots: true,
     });
 
 
